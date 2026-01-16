@@ -13,7 +13,7 @@ df_t <- as.data.frame(t(df_avg))
 # Stores all the number component of the well plate label, the label, 
 # and plate number into lists
 numbers <- as.numeric(rep(1:24,32))
-labels<- rep(rownames(df_t2),2)
+labels<- rep(rownames(df_t),2)
 plate <- as.numeric(c(rep(1,384),rep(2,384)))
 
 # Makes a data frame called slope using the columns of the transposed data frame
@@ -59,9 +59,9 @@ class(df_fin$assay)
 class(df_fin$protein)
 
 # Storing characters as factors
-df_fin$protein <- as.factor(df3$protein)
-df_fin$assay <- as.factor(df3$assay)
-df_fin$well <- as.factor(df3$well)
+df_fin$protein <- as.factor(df_fin$protein)
+df_fin$assay <- as.factor(df_fin$assay)
+df_fin$well <- as.factor(df_fin$well)
 
 summary(df_fin)
 
@@ -71,7 +71,7 @@ saveRDS(df_fin, "Formatted_Data.rds")
 # Creates data frame grouping by protein to calculate the plate and total wells per protein
 df_fin_sum <- df_fin |> group_by(protein)|> summarise(avg_plate=mean(plate))
 
-# Makes a column graph for the plate # per protein
+# Makes a column graph for the plate number per protein
 ggplot(data=df_fin_sum, mapping=aes(x=protein,y= avg_plate)) + geom_col()
        
  
