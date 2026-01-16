@@ -85,4 +85,4 @@ df_averages <- rbind(plate1_avg, plate2_avg)
 
 # Write a csv as an output using the combined average dataframe, with row 
 # labels to decipher rows for each plate
-write.csv(x=df_averages, file="Slope_averages.csv", row.names = TRUE)
+saveRDS(df_averages, file="Slope_averages.rds")
