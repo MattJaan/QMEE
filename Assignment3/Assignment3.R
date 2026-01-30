@@ -2,7 +2,7 @@ library(ggplot2)
 library(readr)
 library(dplyr)
 library(tidyr)
-
+ 
 ## BMB: df masks a built-in R function (usually harmless, but
 ## occasionally causes confusing errors) -- suboptimal variable name
 df <- read_rds("Formatted_Data.rds")

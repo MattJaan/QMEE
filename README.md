@@ -18,3 +18,4 @@ BMB:
 * you can turn the strip labels horizontal, which makes them easier to read
 * would using facet_wrap instead of facet_grid make this easier to read?
 * do you like the default theme (theme_gray) or did you consider other themes?
+ 
