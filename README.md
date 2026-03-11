@@ -1,5 +1,7 @@
 # QMEE
-BIO708 work 
+BIO708 work
+
+JD: Can you say what exactly the combinations were across the rows and columns?
  
 The data is absorption over time of in vitro high-throughput sequencing NADPH assay of different CYP1 proteins in vitro. CYP proteins work in chemical defence to break down toxins. Each well of the plate was labeled with alphabetical rows and numerical columns with noted reagents. Different wells contained the desired protein, NADPH and reductase with the various different combinations to control for the changes in absorption of the individual components and combinations without proteins present. The goal of the data is to find target substrates for various cyp proteins in order to then use them in vivo with cyp knockout lines to see effects in the live organisms.
 
